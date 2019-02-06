@@ -1,3 +1,17 @@
-<p>
-  form-alta works!
-</p>
+<h2>
+  {{ titulo}}
+</h2>
+{{ etiqueta_nombre }}: <input type="text" [placeholder] = "placeholder_nombre"
+[(ngModel)] = "nombreIntroducido"/>
+
+{{etiqueta_desc}}: <input type="text" [placeholder] = "placeholder_desc" 
+[(ngModel)] = "desc_introducido"/>
+
+{{etiqueta_fich}}: <input type="file" [placeholder]= "placeholder_fich"
+[(ngModel)] = "fich_introducido"/>
+
+<input type="button" value="Limpiar" (click) = "limpiar()"/>
+
+<p>{{ nombreIntroducido }}</p>
+<p>{{ desc_introducido }}</p>
+<p>{{ fich_introducido }}</p>
