@@ -1,0 +1,11 @@
+<h2>
+  {{ titulo}}
+</h2>
+{{ etiqueta_nombre }}: <input type="text" [placeholder]="placeholder_nombre" [(ngModel)]="nombreIntroducido" />
+
+
+
+<input type="button" value="Dar de baja" (click)="darDeBaja()" />
+
+<p>{{ nombreIntroducido }}</p>
+
