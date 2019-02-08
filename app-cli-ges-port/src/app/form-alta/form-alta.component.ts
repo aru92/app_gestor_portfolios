@@ -4,8 +4,8 @@ import { PortfoliosService } from '../portfolios.service';
 @Component({
   selector: 'app-form-alta', // <app-form-alta> Etiqueta </app-form-alta>
   templateUrl: './form-alta.component.html',
-  styleUrls: ['./form-alta.component.css'],
-  providers: [PortfoliosService]
+  styleUrls: ['./form-alta.component.css']
+  //providers: [PortfoliosService]
 })
 export class FormAltaComponent implements OnInit {
   titulo: string;

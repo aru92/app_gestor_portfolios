@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FormAltaComponent } from './form-alta/form-alta.component';
 import { FormBajaComponent } from './form-baja/form-baja.component';
 import { ListaComponent } from './lista/lista.component';
+import { PortfoliosService } from './portfolios.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ListaComponent } from './lista/lista.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PortfoliosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

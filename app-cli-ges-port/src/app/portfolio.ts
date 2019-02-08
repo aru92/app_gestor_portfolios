@@ -1,7 +1,7 @@
 export class Portfolio {
   constructor(
     private nombre : string,
-    private descripción : string,
+    private descripcion : string,
     private fichero : string
   ){
   if (this.nombre ==""){

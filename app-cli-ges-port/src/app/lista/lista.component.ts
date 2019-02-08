@@ -5,8 +5,8 @@ import { Portfolio } from '../portfolio';
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
-  styleUrls: ['./lista.component.css'],
-  providers: [PortfoliosService]
+  styleUrls: ['./lista.component.css']
+  //providers: [PortfoliosService]
 })
 export class ListaComponent implements OnInit {
   arrayPortfolios : Array<Portfolio>;
@@ -14,7 +14,10 @@ export class ListaComponent implements OnInit {
   constructor(private servicioP : PortfoliosService) { }
 
   ngOnInit() {
-    this.arrayPortfolios = this.servicioP.listar();
+    this.actualizar();
   }
 
+  actualizar() : void{
+    this.arrayPortfolios = this.servicioP.listar();
+  }
 }
