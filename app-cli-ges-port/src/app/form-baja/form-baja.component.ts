@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfoliosService } from '../portfolios.service';
+import { Portfolio } from 'app/portfolio';
 
 @Component({
   selector: 'app-form-baja',
@@ -8,21 +9,17 @@ import { PortfoliosService } from '../portfolios.service';
   //providers: [PortfoliosService]
 })
 export class FormBajaComponent implements OnInit {
-  titulo: string;
-  etiqueta_nombre: string;
-  placeholder_nombre: string;
   nombreIntroducido: string;
   servPort: PortfoliosService;
+  private arrayPortfolios : Array<Portfolio>;
 
   constructor(sp : PortfoliosService) {
       this.servPort = sp;
+      
    }
 
   ngOnInit() {
-    this.titulo = "Baja de portfolios";
-    this.etiqueta_nombre = "Nombre: ";
-    this.placeholder_nombre = "Introduzca Nombre y apellidos";
-    this.nombreIntroducido = "El Innombrable";
+    this.arrayPortfolios = this.servPort.listar();
     
   
   }

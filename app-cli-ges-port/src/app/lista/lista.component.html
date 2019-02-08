@@ -5,8 +5,9 @@
   Lista portfolios
 </h2>
 <ul>
-  <li *ngFor = "let portfolio of arrayPortfolios">
+  <li *ngFor = "let portfolio of arrayPortfolios; #i = index">
     El portfolio {{ portfolio.nombre }}
+  <input type="button" value="X" (click)="darDeBaja({{ i }})" />
   </li>
 </ul>
 <input type="button" (click) = "actualizar()" value = "Actualizar">

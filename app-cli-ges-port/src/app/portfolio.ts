@@ -9,5 +9,6 @@ export class Portfolio {
     throw new Error("Nombre no puede quedar vacío");
   }
 }
+  public getNombre(): string { return this.nombre; }
 }
 
